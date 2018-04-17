@@ -7,12 +7,12 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.get('/add-city', (req, res) => {
     console.log(req.query)
-    res.send('Submited')
+    res.json(req.query)
 });
 
 app.post('/add-city', (req, res) => {
     console.log(req.body)
-    res.send('Submited')
+    res.json(req.body)
 });
 
 app.get('/:page_name', (req, res) => {
